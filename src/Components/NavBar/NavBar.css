@@ -1,6 +1,29 @@
 nav{
     position: fixed;
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 75px;
     background-color: white;
+}
+
+.nav-content{
+    display: flex;
+    align-items: center;
+    width: 75%;
+    height: 100%;
+    justify-self: center;
+}
+
+.logo{
+    font-size: 30px;
+    border: solid 1px black;
+    border-radius: 0 5em 0 5em;
+    padding-inline: 30px;
+    text-align: center;
+}
+
+.soft{
+    font-weight: normal;
+    color: #6f99d8;
 }
