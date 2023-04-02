@@ -5,4 +5,5 @@
 .posting-space{
     padding-inline: 40px;
     padding-block: 15px;
+    display: grid;
 }

@@ -9,7 +9,7 @@ const CreatePostForm = (props) => {
     function handleSubmit(event){
         event.preventDefault()
         if(name !== '' && message !== ''){
-            props.newPost({name: name, message: message, like: false, dislike: false})
+            props.newPost({name: name, message: message})
             setName('')
             setMessage('')
         }

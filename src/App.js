@@ -13,19 +13,6 @@ function App() {
     setPosts(tempPost)
   }
 
-  function likeOrDislike (name, like, dislike){
-    let tempPost = [...posts]
-    tempPost.map((post) => {
-      if(name === post.name){
-        return{name: post.name, message: post.message, like: like, dislike: dislike}
-      }
-      else{
-        return{name: post.name, message: post.message, like: post.like, dislike: post.dislike}
-      }
-    })
-    setPosts(tempPost)
-  }
-
   return (
     <div>
       <NavBar/>
@@ -33,8 +20,8 @@ function App() {
         <div className='box'>
           <CreatePostForm newPost={newPost}/>
         </div>
-        <div className={'box post-area'}>
-          <PostList allPosts={posts} likeOrDislike={likeOrDislike} />
+        <div className='box'>
+          <PostList allPosts={posts} />
         </div>
       </div>
     </div>
