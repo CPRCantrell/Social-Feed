@@ -1,0 +1,8 @@
+.break{
+    border-bottom: solid 1px grey;
+}
+
+.posting-space{
+    padding-inline: 40px;
+    padding-block: 15px;
+}

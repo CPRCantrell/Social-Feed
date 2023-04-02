@@ -3,7 +3,9 @@ import "./NavBar.css"
 const NavBar = () => {
     return (
         <nav>
-            <h1>SocialFeed</h1>
+            <div>
+                <h1>SocialFeed</h1>
+            </div>
         </nav>
     );
 }

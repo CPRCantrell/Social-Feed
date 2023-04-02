@@ -1,31 +1,41 @@
-import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { useState } from 'react';
 import NavBar from "./Components/NavBar/NavBar";
 import CreatePostForm from "./Components/CreatePostForm/CreatePostForm";
 import PostList from './Components/PostList/PostList';
+import "./App.css"
 
 function App() {
 
   const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    const postsExist = ReactDOM.createRoot(document.getElementById('postList'));
-    postsExist.render(<PostList allPosts={posts}/>)
-  }, [posts]);
 
   function newPost(post){
     let tempPost = [post, ...posts]
     setPosts(tempPost)
   }
 
+  function likeOrDislike (name, like, dislike){
+    let tempPost = [...posts]
+    tempPost.map((post) => {
+      if(name === post.name){
+        return{name: post.name, message: post.message, like: like, dislike: dislike}
+      }
+      else{
+        return{name: post.name, message: post.message, like: post.like, dislike: post.dislike}
+      }
+    })
+    setPosts(tempPost)
+  }
+
   return (
     <div>
       <NavBar/>
-      <div>
-        <div>
+      <div className='content-container'>
+        <div className='box'>
           <CreatePostForm newPost={newPost}/>
         </div>
-        <div id='postList'></div>
+        <div className={'box post-area'}>
+          <PostList allPosts={posts} likeOrDislike={likeOrDislike} />
+        </div>
       </div>
     </div>
   );

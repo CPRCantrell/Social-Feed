@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.post-wrapper{
+    display: grid;
+}
+
+.name-space{
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+.message-space{
+    margin-block: 10px;
+    margin-left: 20px;
+}
+
+.like-dislike-space{
+    justify-self: flex-end;
+}
+
+.vote-btn{
+    width: 60px;
+    border: none;
+    border-radius: none;
+    padding-block: 2px;
+}
+
+.like{
+    border-radius: 10em 0 0 10em;
+}
+
+.dislike{
+    border-radius:  0 10em 10em 0;
+}
+
+.off{
+    background-color: rgb(228, 228, 228);
+}
+
+.on-like{
+    background-color: rgb(121, 167, 121);
+}
+
+.on-dislike{
+    background-color: rgb(202, 143, 143);
+}
