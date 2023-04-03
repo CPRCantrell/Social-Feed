@@ -9,7 +9,7 @@ function App() {
   const [posts, setPosts] = useState([]);
 
   function newPost(post){
-    let tempPost = [post, ...posts]
+    let tempPost = [...posts, post]
     setPosts(tempPost)
   }
 
