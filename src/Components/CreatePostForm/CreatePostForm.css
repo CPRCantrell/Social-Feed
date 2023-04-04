@@ -8,9 +8,21 @@ textarea{
     padding: 25px;
 }
 
+.form-title{
+    justify-self: center;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+}
+
 .form-group{
     display: grid;
     font-size: 18px;
+}
+
+.input-label{
+    display: flex;
+    align-items: center;
 }
 
 .need-space{
@@ -21,18 +33,14 @@ textarea{
     border-radius: 10px;
     font-size: 18px;
     padding: 6px 10px;
+    border: solid 1px black;
 }
 
-.no-error{
-    border: solid 1px grey;
-}
-
-.no-error:focus{
+.form-control:focus{
     outline: none;
-    border-color: black;
 }
 
-.error{
+.invalid-input{
     border-color: red;
 }
 
@@ -56,4 +64,22 @@ textarea{
     transform: translate(0);
     box-shadow: inset 2px 2px 2px black;
     background-color: #265daf;
+}
+
+.alert-text{
+    color: red;
+    font-size: 12px;
+    margin-left: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.alert-title{
+    justify-self: center;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden{
+    height: 0;
+    visibility: hidden;
 }
