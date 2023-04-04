@@ -165,7 +165,6 @@ input:checked + .slider::before{
 @media only screen and (max-width: 650px){
 
     .nav-content{
-        background-color: aquamarine;
         justify-content: center;
     }
 
