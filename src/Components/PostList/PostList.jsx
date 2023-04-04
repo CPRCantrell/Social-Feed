@@ -11,7 +11,7 @@ const PostList = (props) => {
         <>
             {props.allPosts.map((post, index) => {
                 return(
-                <div className={`posting-space ${lastPost(index)}`} key={index}>
+                <div className={`posting-space ${props.settings.bubbleView ? 'bubble-view-post':lastPost(index)}`} key={index}>
                     <Post name={post.name} message={post.message} time={post.time}/>
                 </div>);
             }).reverse()}

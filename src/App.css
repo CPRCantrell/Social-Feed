@@ -47,6 +47,20 @@ h2{
     visibility: hidden;
 }
 
+.bubble-view-area{
+    display: grid;
+    margin-top: 25px;
+    width: 750px;
+}
+
+.bubble-view-title{
+    background-color: white;
+    width: 100%;
+    border: none;
+    border-radius: 1em;
+    box-shadow: 12px 10px 10px hsla(0, 0%, 0%, 0.5);
+}
+
 footer{
     margin-top: 25px;
     width: 100%;
@@ -58,6 +72,10 @@ footer{
     .box{
         width: 600px;
     }
+
+    .bubble-view-area{
+        width: 600px;
+    }
 }
 
 @media only screen and (max-width: 600px){
@@ -65,5 +83,14 @@ footer{
         width: 100%;
         border-radius: 0;
         box-shadow: none;
+    }
+
+    .bubble-view-title{
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .bubble-view-area{
+        width: 100%;
     }
 }

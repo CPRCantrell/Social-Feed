@@ -28,9 +28,9 @@ function App() {
           <div className='box'>
             <CreatePostForm newPost={newPost}/>
           </div>
-          <div className='box'>
-            <h2 className={`post-title ${posts.length === 0 ? "hidden":""}`}>Most Recent Posts</h2>
-            <PostList allPosts={posts} />
+          <div className={settings.bubbleView ? 'bubble-view-area':'box'}>
+            <h2 className={`post-title ${posts.length === 0 ? "hidden":settings.bubbleView ? 'bubble-view-title':''}`}>Most Recent Posts</h2>
+            <PostList allPosts={posts} settings={settings}/>
           </div>
         </section>
         <footer>
