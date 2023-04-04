@@ -22,6 +22,7 @@ function App() {
             <CreatePostForm newPost={newPost}/>
           </div>
           <div className='box'>
+            <h2 className={`post-title ${posts.length === 0 ? "hidden":""}`}>Most Recent Posts</h2>
             <PostList allPosts={posts} />
           </div>
         </section>

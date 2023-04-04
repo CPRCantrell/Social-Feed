@@ -27,3 +27,9 @@ nav{
     font-weight: normal;
     color: #6f99d8;
 }
+
+@media only screen and (max-width: 600px){
+    .nav-content{
+        justify-content: center;
+    }
+}
