@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./NavBar.css"
 
-const NavBar = () => {
+const NavBar = (props) => {
 
     const [showSettingMenu, setshowSettingMenu] = useState(false);
 
     function handleSettingClick(){
-        showSettingMenu ? setshowSettingMenu(false):setshowSettingMenu(true)
+        showSettingMenu ? setshowSettingMenu(false) : setshowSettingMenu(true)
     }
 
     return (
@@ -26,7 +26,7 @@ const NavBar = () => {
                 <div className={`${showSettingMenu ? "option":"option-hide"}`}>
                     <label className='option-label'>Bubble-view:</label>
                     <label className='switch'>
-                        <input type='checkbox'></input>
+                        <input type='checkbox' checked={props.settings.bubbleView} onClick={(e)=>props.changeSetting('bubbleView', e.target.checked)}></input>
                         <span className='slider round'></span>
                     </label>
                 </div>

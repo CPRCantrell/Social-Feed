@@ -7,15 +7,22 @@ import "./App.css"
 function App() {
 
   const [posts, setPosts] = useState([]);
+  const [settings, setSettings] = useState({bubbleView: false});
 
   function newPost(post){
     let tempPost = [...posts, post]
     setPosts(tempPost)
   }
 
+  function changeSetting(setting,value){
+    let tempHolder = {...settings}
+    tempHolder[setting] = value
+    setSettings(tempHolder)
+  }
+
   return (
     <div>
-      <NavBar/>
+      <NavBar changeSetting={changeSetting} settings={settings}/>
       <div className='web-container'>
         <section className='content-container'>
           <div className='box'>

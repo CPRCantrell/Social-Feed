@@ -128,7 +128,7 @@ nav{
     right: 0;
     bottom: 0;
     background-color: #cccccc;
-    transition: translate .4s;
+    transition: transform .4s;
 }
 
 .slider::before{
@@ -139,7 +139,7 @@ nav{
     width: 16px;
     left: 2px;
     bottom: 2px;
-    transition: translate .4s;
+    transition: transform .4s;
 }
 
 input:checked + .slider{
