@@ -7,8 +7,20 @@
     display: grid;
 }
 
+.name-time-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .name-space{
     font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+.time-space{
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
 }
 

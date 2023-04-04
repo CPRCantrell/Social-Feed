@@ -12,7 +12,7 @@ const PostList = (props) => {
             {props.allPosts.map((post, index) => {
                 return(
                 <div className={`posting-space ${lastPost(index)}`} key={index}>
-                    <Post name={post.name} message={post.message} />
+                    <Post name={post.name} message={post.message} time={post.time}/>
                 </div>);
             }).reverse()}
         </>

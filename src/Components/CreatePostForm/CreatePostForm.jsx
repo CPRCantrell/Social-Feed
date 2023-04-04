@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FormatTime } from './FormatTime/FormatTime';
 import "./CreatePostForm.css"
 
 const CreatePostForm = (props) => {
@@ -11,11 +12,11 @@ const CreatePostForm = (props) => {
     function handleSubmit(event){
         event.preventDefault()
         if(name !== '' && message !== ''){
-            props.newPost({name: name, message: message})
+            let postTime = new Date()
+            postTime = FormatTime(postTime)
+            props.newPost({name: name, message: message, time: postTime})
             setName('')
-            setNameMissing(false)
             setMessage('')
-            setMessageMissing(false)
         }
         else{
             setNameMissing(false)
