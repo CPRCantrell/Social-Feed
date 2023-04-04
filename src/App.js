@@ -16,13 +16,17 @@ function App() {
   return (
     <div>
       <NavBar/>
-      <div className='content-container'>
-        <div className='box'>
-          <CreatePostForm newPost={newPost}/>
-        </div>
-        <div className='box'>
-          <PostList allPosts={posts} />
-        </div>
+      <div className='web-container'>
+        <section className='content-container'>
+          <div className='box'>
+            <CreatePostForm newPost={newPost}/>
+          </div>
+          <div className='box'>
+            <PostList allPosts={posts} />
+          </div>
+        </section>
+        <footer>
+        </footer>
       </div>
     </div>
   );
