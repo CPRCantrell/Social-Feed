@@ -51,6 +51,7 @@ h2{
     display: grid;
     margin-top: 25px;
     width: 750px;
+    transition: all 1s;
 }
 
 .bubble-view-title{
@@ -59,6 +60,7 @@ h2{
     border: none;
     border-radius: 1em;
     box-shadow: 12px 10px 10px hsla(0, 0%, 0%, 0.5);
+    transition: all 1s;
 }
 
 footer{

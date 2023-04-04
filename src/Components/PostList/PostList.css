@@ -6,6 +6,7 @@
     padding-inline: 40px;
     padding-block: 15px;
     display: grid;
+    transition: all 1s;
 }
 
 .bubble-view-post{
@@ -15,6 +16,7 @@
     width: 100%;
     box-shadow: 12px 10px 10px hsla(0, 0%, 0%, 0.5);
     justify-self: center;
+    transition: all 1s;
 }
 
 @media only screen and (max-width: 750px){
