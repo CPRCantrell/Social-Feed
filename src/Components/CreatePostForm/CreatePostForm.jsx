@@ -18,14 +18,14 @@ const CreatePostForm = (props) => {
         setMessage('')
     }
 
-    function handleNameBlur(e){
-        if(e.target.value !== ''){
+    function handleNameBlur(value){
+        if(value !== ''){
             setNameInvalid(false)
         }
     }
 
-    function handleMessageBlur(e){
-        if(e.target.value !== ''){
+    function handleMessageBlur(value){
+        if(value !== ''){
             setMessageInvalid(false)
         }
     }
@@ -49,14 +49,14 @@ const CreatePostForm = (props) => {
                     <label>Name</label>
                     <div className={`alert-text ${nameInvalid ? '' : 'hidden'}`}>*required</div>
                 </div>
-                <input type="text" className={`form-control ${nameInvalid ? 'invalid-input' : ''}`} value={name} onChange={(event) => setName(event.target.value)} onBlur={(e) => handleNameBlur(e)} onInvalid={(e) => handleNameInvalid(e)} required/>
+                <input type="text" className={`form-control ${nameInvalid ? 'invalid-input' : ''}`} value={name} onChange={(event) => setName(event.target.value)} onBlur={(e) => handleNameBlur(e.target.value)} onInvalid={(e) => handleNameInvalid(e)} required/>
             </div>
             <div className='form-group need-space'>
                 <div className='input-label'>
                     <label>Thoughts</label>
                     <div className={`alert-text ${messageInvalid ? 'invalid' : 'hidden'}`}>*required</div>
                 </div>
-                <textarea className={`form-control ${messageInvalid ? 'invalid-input' : ''}`} value={message} onChange={(event) => setMessage(event.target.value)} onBlur={(e) => handleMessageBlur(e)} onInvalid={(e) => handleMessageInvalid(e)} required/>
+                <textarea className={`form-control ${messageInvalid ? 'invalid-input' : ''}`} value={message} onChange={(event) => setMessage(event.target.value)} onBlur={(e) => handleMessageBlur(e.target.value)} onInvalid={(e) => handleMessageInvalid(e)} required/>
             </div>
             <button type="submit" className='btn need-space'>Post Update</button>
         </form>
